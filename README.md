@@ -1,36 +1,57 @@
-VM Health Check Script A Bash script for monitoring the health of Ubuntu virtual machines based on CPU, memory, and disk utilization.
+# 🩺 VM Health Check Script: Your Ubuntu VM's Guardian Angel 👼
 
-Overview This script checks the current utilization of system resources (CPU, memory, and disk space) on an Ubuntu virtual machine and determines if the system is healthy based on a 60% utilization threshold. If any of the monitored resources exceed this threshold, the system is considered unhealthy.
+Is your Ubuntu VM silently struggling? 😱 Don't let resource bottlenecks turn into full-blown disasters! 🔥
+This Bash script acts as a vigilant guardian, constantly monitoring the pulse of your Ubuntu virtual machines. Get instant insights into CPU, memory, and disk utilization, and proactively address potential issues before they escalate. 🚀
 
-Features Monitors CPU, memory, and disk utilization Provides simple "Healthy" or "Not Healthy" status output Optional detailed explanation of health status with the explain parameter Specifically designed for Ubuntu virtual machines Requirements Ubuntu operating system Bash shell Basic utilities: top, free, df, bc, awk, sed Installation Clone this repository or download the script: bash git clone https://github.com/sahilravan/vm-health-check.git cd vm-health-check Make the script executable: bash chmod +x vm_health_check.sh Usage Basic Usage Run the script without any parameters to get a simple health status:
+## ✨ Key Features: Effortless VM Monitoring
 
-bash ./vm_health_check.sh 
+* ⚡️ Lightning-Fast Health Checks: Get a clear "Healthy" or "Not Healthy" status in seconds.
+* 🔍 Sherlock-Level Diagnostics: Dive deep with the `explain` parameter for detailed resource utilization breakdowns.
+* 🎯 Ubuntu-Optimized: Crafted specifically for Ubuntu VMs, ensuring pinpoint accuracy.
+* 🛠️ Ridiculously Simple Setup: Clone, execute, and GO! No complex configurations needed.
 
-Example output:
+## 🚀 Getting Started: Empower Your VMs in Minutes
 
-VM Health Status: Healthy Detailed Explanation Add the explain parameter to get detailed information about the health status:
+### 🛠️ Installation: Just a Few Commands Away
 
-bash ./vm_health_check.sh explain 
+1.  **Clone the Magic:**
+    ```bash
+    git clone [https://github.com/sahilravan/vm-health-check.git](https://github.com/sahilravan/vm-health-check.git) && cd vm-health-check
+    ```
+2.  **Make it Run:**
+    ```bash
+    chmod +x vm_health_check.sh
+    ```
 
-Example output:
+### 🎯 Usage: Instant Health Insights
 
-VM Health Status: Not Healthy
+#### ⚡️ Basic Usage: Quick Check
 
-Health Status Explanation:
-CPU Usage: 45% (Threshold: 60%) - OK Memory Usage: 72% (Threshold: 60%) - ALERT Disk Usage: 55% (Threshold: 60%) - OK
+Run the script for a simple "Healthy" or "Not Healthy" status:
 
-Reason for Not Healthy status:
+```bash
+./vm_health_check.sh
+```
+![image](https://github.com/user-attachments/assets/3f5b285d-9e09-420c-bf27-ebaab6ca51f1)
 
-Memory utilization exceeds the threshold of 60%
-Recommendation: Consider optimizing resource usage or scaling up resources. How It Works The script determines health status based on these criteria:
 
-CPU utilization: Percentage of CPU currently in use Memory utilization: Percentage of RAM currently in use Disk utilization: Percentage of root filesystem space currently in use If any of these resources exceeds 60% utilization, the VM is considered "Not Healthy."
+⚙️ How It Works: The Brains Behind the Operation
+The script intelligently monitors:
 
-Customization You can modify the threshold value by changing the threshold variable in the script:
+🧠 CPU Utilization: Percentage of CPU currently in use.
 
-bash
+💾 Memory Utilization: Percentage of RAM currently in use.
 
-Set health status threshold
-threshold=60 # Change this to your desired percentage License MIT License
+💽 Disk Utilization: Percentage of root filesystem space currently in use.
 
-Contributing Contributions are welcome! Please feel free to submit a Pull Request.
+
+If any of these resources exceed 60% utilization, the VM is flagged as "Not Healthy."
+
+🔧 Customization: Tailor to Your Needs
+You can easily adjust the threshold by modifying the threshold variable within the script:
+
+```bash
+threshold=60 # Change this to your desired percentage
+```
+
+Let's keep our VMs healthy and happy! 🌟
