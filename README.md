@@ -2,7 +2,7 @@ VM Health Check Script A Bash script for monitoring the health of Ubuntu virtual
 
 Overview This script checks the current utilization of system resources (CPU, memory, and disk space) on an Ubuntu virtual machine and determines if the system is healthy based on a 60% utilization threshold. If any of the monitored resources exceed this threshold, the system is considered unhealthy.
 
-Features Monitors CPU, memory, and disk utilization Provides simple "Healthy" or "Not Healthy" status output Optional detailed explanation of health status with the explain parameter Specifically designed for Ubuntu virtual machines Requirements Ubuntu operating system Bash shell Basic utilities: top, free, df, bc, awk, sed Installation Clone this repository or download the script: bash git clone https://github.com/yourusername/vm-health-check.git cd vm-health-check Make the script executable: bash chmod +x vm_health_check.sh Usage Basic Usage Run the script without any parameters to get a simple health status:
+Features Monitors CPU, memory, and disk utilization Provides simple "Healthy" or "Not Healthy" status output Optional detailed explanation of health status with the explain parameter Specifically designed for Ubuntu virtual machines Requirements Ubuntu operating system Bash shell Basic utilities: top, free, df, bc, awk, sed Installation Clone this repository or download the script: bash git clone https://github.com/sahilravan/vm-health-check.git cd vm-health-check Make the script executable: bash chmod +x vm_health_check.sh Usage Basic Usage Run the script without any parameters to get a simple health status:
 
 bash ./vm_health_check.sh 
 
